@@ -6,7 +6,7 @@ Longest palindrome using REST api
 3. Spring Data JPA-Data access layer
 4. Spring H2- for database
 
-<------Longest Palindrome Logic------>
+<------Longest Palindrome SubString Logic------>
 
     public class PalindromeService {
         public String longestPalindrome(String s) {
