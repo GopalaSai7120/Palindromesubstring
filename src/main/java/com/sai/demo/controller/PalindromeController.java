@@ -16,7 +16,7 @@ public class PalindromeController {
     StringRepo repo;
 
     @PostMapping("/addString")
-    public PalindromeString addStudent(@RequestBody PalindromeString inputString){
+    public PalindromeString inputDesiredString(@RequestBody PalindromeString inputString){
         PalindromeService palindromeService=new PalindromeService();
         String opString = palindromeService.longestPalindrome(inputString.getInputString());
         inputString.setResultString(opString);
@@ -25,12 +25,12 @@ public class PalindromeController {
     }
 
     @GetMapping("/getallstrings")
-    public List<PalindromeString> getStudents(){
+    public List<PalindromeString> getAllResults(){
         return repo.findAll();
     }
 
     @GetMapping("/string/{id}")
-    public Optional<PalindromeString> getStudent(@PathVariable int id){
+    public Optional<PalindromeString> getString(@PathVariable int id){
         return repo.findById(id);
     }
 }
